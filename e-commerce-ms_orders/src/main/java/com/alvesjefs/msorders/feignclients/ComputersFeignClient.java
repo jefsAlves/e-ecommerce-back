@@ -12,7 +12,7 @@ import com.alvesjefs.msorders.domain.Computers;
 
 @FeignClient(name = "ms-computers", path = "api/computers")
 @Component
-public interface ComputersFeignClients {
+public interface ComputersFeignClient {
 
 	@GetMapping(value = "/searchName")
 	ResponseEntity<Computers> findByName(@RequestParam String name);
